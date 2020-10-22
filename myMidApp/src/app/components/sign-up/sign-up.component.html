@@ -1,0 +1,8 @@
+<h1 id = 'reg'>Registration</h1>
+<div class = 'signup'>
+    <form [formGroup] = 'regForm'>
+        <input type="text" id = 'user' matInput formControlName = 'username' ngDefaultControl placeholder = 'Username'> 
+        <input type="password" id = 'password' formControlName = 'password' matInput ngDefaultControl placeholder = 'Password'>
+        <button mat-button id = 'sign' (click) = 'signup()'>Sign up</button>
+    </form>
+</div>

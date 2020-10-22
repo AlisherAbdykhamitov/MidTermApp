@@ -1,0 +1,15 @@
+<div id="main">
+    <nav><button mat-button (click) = 'logout()' routerLink = '/login' id = 'logout'>Logout</button></nav>
+</div>
+
+<div id = 'cardsback'>
+    <h1 id = 'user'>Users</h1>
+    <div id = 'cards' *ngFor = 'let user of users'>
+        <h1 id = 'names'>{{user.name}}</h1>
+        <div id = 'cardInside'>
+            <p> <mat-icon>account_name of</mat-icon> {{user.username}} </p>
+            <p> <mat-icon>email of </mat-icon> {{user.email}} </p>
+            <p> <mat-icon>contact_phone of</mat-icon> {{user.phone}} </p>
+        </div>
+    </div>
+</div>

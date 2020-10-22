@@ -1,0 +1,56 @@
+#main {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color:rgb(129, 129, 129);
+}
+
+#cardsback {
+    z-index: 0;
+    position: absolute;
+    column-count: 5;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    background-color: rgb(219, 200, 26);
+}
+#cardsback #user {
+    position: absolute;
+    left: 45%;
+    z-index: 1;
+    top: 6.5%;
+    color:rgb(51, 21, 160);
+    text-align: center;
+    size: 25dp;
+}
+#cards {
+  
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 49%;
+    background-color: white;
+}
+#cards #names {
+    text-align: center;
+    padding-top: 5%;
+    border-top: solid rgb(209, 19, 19) 20px;
+    color:black;
+    font-family: 'Segoe UI';
+    font-size: medium;
+    font-weight: bold;
+}
+
+#cardInside mat-icon {
+    margin-left: 7.5%;
+    color: rgb(37, 98, 148);
+}
+
+
+#logout {
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    background-color: rgb(109, 170, 231);
+    color: white;
+}

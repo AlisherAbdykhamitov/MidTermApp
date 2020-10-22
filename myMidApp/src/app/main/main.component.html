@@ -1,0 +1,43 @@
+<div id = 'background'>
+    <nav><button mat-button (click) = 'logout()' routerLink = '/login' id = 'logout'>Logout</button></nav>
+  </div>
+    <div id = 'main'>
+      <h1>Последние публикации</h1>
+    </div>
+  
+    <div id="list">
+      <nav>
+        <h2>Posts on this page</h2>
+        <h1 routerLink = '/users'>
+          <mat-icon> contacts of</mat-icon> 
+          Users</h1>
+        <h1 id="alb" routerLink = '/alb'>
+          <mat-icon> User's of</mat-icon> 
+          Albums</h1>
+          <h1 id="alb" routerLink = '/posts'>
+            <mat-icon> User's of</mat-icon> 
+            Posts</h1>
+      </nav>
+    </div>
+  
+    <div id = 'whatishappen'>
+        <input contenteditable = "true" placeholder="Share with your news!" id = 'publish' [(ngModel)] = 'post'>
+
+      <button mat-button id = 'butpub' (click) = 'publish()'>Publish</button>
+      <div *ngIf = 'isPublished' id = 'kartochka'>
+        <div *ngIf = '!comment'>
+          <div id = 'newp'>{{newPost}}</div>
+          <div id = 'timestamp'>{{date | date: "dd-hh-mm-ss"}}</div>
+          <button mat-button id = 'postcomment' (click) = 'postcommentShow()'>Comments</button>
+        </div>
+        <div *ngIf = 'comment'>
+          <li *ngFor = 'let comment of newComments' id = 'newComments'>
+            {{comment}}
+          </li>
+          <input matInput placeholder= "Write your comment there" [(ngModel)] = 'newComment' id = 'writecomment'>
+          <button mat-button (click) = 'publishComment()' id = 'pubbut'>Publish comment</button>
+          <button mat-button (click) = 'return()' id = 'return'><mat-icon>keyboard_backspace</mat-icon></button>
+        </div>
+      </div>
+    </div>
+  

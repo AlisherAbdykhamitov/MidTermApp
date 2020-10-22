@@ -1,0 +1,14 @@
+<div id="back">
+    <nav><button mat-button (click) = 'logout()' routerLink = '/login' id = 'logout'>Logout</button></nav>
+</div>
+<div id = 'cardsback'>
+    <h1 id = 'album'>Albums</h1>
+        <div id = 'cards' *ngFor = 'let album of albums.slice(0, 10)'>
+            <h1 id = 'names'>{{album.title}}</h1>
+            <div id = 'cardback'>
+                <mat-icon>{{album.userId}}
+                    {{album.id}}
+                </mat-icon>
+            </div>
+        </div>
+</div>

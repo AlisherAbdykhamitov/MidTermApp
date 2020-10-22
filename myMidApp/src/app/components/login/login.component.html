@@ -1,0 +1,10 @@
+<div id = 'signin'>
+    <form [formGroup] = 'loginForm'>
+      <input type="text" formControlName = 'username' placeholder = 'Username' name = 'username'><br>
+      <input type = 'password' formControlName = 'password' placeholder="Password" name = 'password'>
+      <nav>
+        <button mat-button id = 'login' (click) = 'submittion()'>Login</button>
+        <button mat-button id = 'signup' routerLink = '/sign-up'>Sign up</button>
+      </nav>
+    </form>
+  </div>

@@ -1,0 +1,16 @@
+<div id = "all">
+  <div #glav id="glav">
+    <div *ngFor = 'let post of posts.slice(0, 5)'>
+      <div id = "card">
+        <ul id="box">
+          <li><mat-card-title id = 'titli'> <strong>Title: </strong>{{post.title}}</mat-card-title>
+          <div *ngIf = '!show'>
+            <mat-card-content #content id = 'content'>
+              "{{post.body}}"
+              "{{post.id}}"
+            </mat-card-content>
+          </div>
+          </li>
+        </ul>
+      </div>
+   </div>
